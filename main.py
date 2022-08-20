@@ -176,14 +176,14 @@ async def очистить(ctx, amount):
 async def очисти(ctx, amount):
     await ctx.reply(f"Сейчас через 3 секунды очищю {amount} сообщений")
     time.sleep(3)
-    await ctx.channel.purge(limit = amount + 2)
+    await ctx.message.author.channel.purge(limit = amount + 2)
 
 @bot.command()
 @commands.has_permissions(manage_messages=True)
 async def clear(ctx, amount):
     await ctx.reply(f"Now i clear {amount} messages in 3 seconds")
     time.sleep(3)
-    await ctx.channel.purge(limit = amount + 2)
+    await ctx.message.author.channel.purge(limit = amount + 2)
 
 @очистить.error
 async def error(ctx, error):
