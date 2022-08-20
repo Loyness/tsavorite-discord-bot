@@ -114,35 +114,35 @@ async def whenupdate(ctx):
 #Команда Погода
 @bot.command()
 async def погода(ctx, city):
-    config_dict = get_default_config()
-    config_dict['language'] = 'ru'
-    owm = pyowm.OWM('095cf29b891a2f66e2989b3b8f162ac8', config_dict)
-    mgr = owm.weather_manager()
-    observation = mgr.weather_at_place(city)
-    w = observation.weather
-    temperature = w.temperature('celsius')
-    embed = discord.Embed(title=f"Погода - {city}", description=f"Сейчас там {w.status}", color=0x00fa9a)
-    embed.add_field(name="Температура", value=temperature+"°C", inline=False),
-    embed.add_field(name="Влажность", value=w.humidity + "%", inline=True),
-    embed.add_field(name="Детальный статус", value=w.detailed_status, inline=False),
-    embed.add_field(name="Облачность", value=w.clouds + "%", inline=False)
+    #config_dict = get_default_config()
+    #config_dict['language'] = 'ru'
+    #owm = pyowm.OWM('095cf29b891a2f66e2989b3b8f162ac8', config_dict)
+    #mgr = owm.weather_manager()
+    #observation = mgr.weather_at_place(city)
+    #w = observation.weather
+    #temperature = w.temperature('celsius')
+    #embed = discord.Embed(title=f"Погода - {city}", description=f"Сейчас там {w.status}", color=0x00fa9a)
+    #embed.add_field(name="Температура", value=temperature+"°C", inline=False),
+    #embed.add_field(name="Влажность", value=w.humidity + "%", inline=True),
+    #embed.add_field(name="Детальный статус", value=w.detailed_status, inline=False),
+    #embed.add_field(name="Облачность", value=w.clouds + "%", inline=False)
 
-    await ctx.send(embed=embed)
+    await ctx.send("> Coming in 20.09.2022")
 
 @bot.command()
 async def weather(ctx, city):
-    owm = pyowm.OWM('095cf29b891a2f66e2989b3b8f162ac8')
-    mgr = owm.weather_manager()
-    observation = mgr.weather_at_place(city)
-    w = observation.weather
-    temperature = w.temperature('celsius')
-    embed = discord.Embed(title=f"Weather - {city}", description=f"For now there {w.status}", color=0x00fa9a)
-    embed.add_field(name="Temperature (Celsius)", value=temperature+"°C", inline=False),
-    embed.add_field(name="Humidity", value=w.humidity + "%", inline=True),
-    embed.add_field(name="Detailed status", value=w.detailed_status, inline=False),
-    embed.add_field(name="Clouds", value=w.clouds + "%", inline=False)
+    #owm = pyowm.OWM('095cf29b891a2f66e2989b3b8f162ac8')
+    #mgr = owm.weather_manager()
+    #observation = mgr.weather_at_place(city)
+    #w = observation.weather
+    #temperature = w.temperature('celsius')
+    #embed = discord.Embed(title=f"Weather - {city}", description=f"For now there {w.status}", color=0x00fa9a)
+    #embed.add_field(name="Temperature (Celsius)", value=temperature+"°C", inline=False),
+    #embed.add_field(name="Humidity", value=w.humidity + "%", inline=True),
+    #embed.add_field(name="Detailed status", value=w.detailed_status, inline=False),
+    #embed.add_field(name="Clouds", value=w.clouds + "%", inline=False)
 
-    await ctx.send(embed=embed)
+    await ctx.send("> Coming in 20.09.2022")
 
 #Тест на эмбэд
 @bot.command()
