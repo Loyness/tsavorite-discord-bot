@@ -24,7 +24,7 @@ YDL_OPTIONS = {'format': 'worstaudio/best', 'noplaylist': 'False', 'simulate': '
 FFMPEG_OPTIONS = {'before_options': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5', 'options': '-vn'}
 
 
-HELLO_WORDS = ['привет', 'здравствуйте', 'приветик', 'всем привет', 'ку', 'здарова']
+HELLO_WORDS = ['привет', 'здравствуйте', 'приветик', 'всем привет', 'ку', 'Всем ку', 'Всем здарова', 'Всем дарова', 'Всем дароу', 'Дароу', 'здарова']
 HELLO_ANSWERS = ['Приветики:wave:', 'Привет)', 'Здравствуй']
 
 
@@ -389,10 +389,12 @@ async def unban(ctx, *, member):
 @bot.command()
 async def зайти(ctx):
     vc = await ctx.message.author.voice.channel.connect()
+    await ctx.send(f"Подключился к {vc}")
 
 @bot.command()
 async def join(ctx):
     vc = await ctx.message.author.voice.channel.connect()
+    await ctx.send(f"Connect to {vc}")
 
 @bot.command()
 async def выйти(ctx):
