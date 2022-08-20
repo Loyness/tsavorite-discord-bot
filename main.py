@@ -25,7 +25,7 @@ FFMPEG_OPTIONS = {'before_options': '-reconnect 1 -reconnect_streamed 1 -reconne
 
 
 HELLO_WORDS = ['привет', 'здравствуйте', 'приветик', 'всем привет', 'ку', 'Всем ку', 'Всем здарова', 'Всем дарова', 'Всем дароу', 'Дароу', 'здарова']
-HELLO_ANSWERS = ['Приветики:wave:', 'Привет)', 'Здравствуй']
+HELLO_ANSWERS = ['Приветики:wave:', 'Привет)', 'Здравствуй', ]
 
 
 
@@ -100,16 +100,16 @@ async def чтотыумеешь(ctx):
 #Команда Когда обновление
 @bot.command()
 async def когдаобновление(ctx):
-    await ctx.send('Очень скоро;)')
-    time.sleep(3)
-    await ctx.send('Наверное...')
+    owm = pyowm.OWM('095cf29b891a2f66e2989b3b8f162ac8')
+    mgr = owm.weather_manager()
+    observation = mgr.weather_at_place(city)
+    w = observation.weather
+    await ctx.send(f'Погода в Лондоне - {w.status}')
     print("Обновление просят... Я ответил что уже скоро...")
 
 @bot.command()
 async def whenupdate(ctx):
-    await ctx.send('Very soon;)')
-    time.sleep(3)
-    await ctx.send('Maybe..')
+    await ctx.send(f'Wheather in London {w.status}')
 
 #Команда Погода
 @bot.command()
