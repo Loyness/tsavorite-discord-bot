@@ -33,7 +33,7 @@ HELLO_ANSWERS = ['Приветики:wave:', 'Привет)', 'Здравств�
 @bot.event
 async def on_ready():
     print("Цаворит в онлайне;)")
-    await bot.change_presence(status=discord.Status.idle, activity=discord.Game('ц.чтотыумеешь') )
+    await bot.change_presence(status=discord.Status.idle, activity=discord.Game('v1.0 ц.чтотыумеешь') )
 
 @bot.event
 async def on_message(message):
