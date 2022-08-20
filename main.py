@@ -389,12 +389,12 @@ async def unban(ctx, *, member):
 @bot.command()
 async def зайти(ctx):
     vc = await ctx.message.author.voice.channel.connect()
-    await ctx.send(f"Подключился к {vc}")
+    await ctx.send(f"Подключился")
 
 @bot.command()
 async def join(ctx):
     vc = await ctx.message.author.voice.channel.connect()
-    await ctx.send(f"Connect to {vc}")
+    await ctx.send(f"Connect")
 
 @bot.command()
 async def выйти(ctx):
