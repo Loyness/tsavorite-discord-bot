@@ -102,13 +102,17 @@ async def чтотыумеешь(ctx):
 async def когдаобновление(ctx):
     owm = pyowm.OWM('095cf29b891a2f66e2989b3b8f162ac8')
     mgr = owm.weather_manager()
-    observation = mgr.weather_at_place(city)
+    observation = mgr.weather_at_place(Лондон)
     w = observation.weather
     await ctx.send(f'Погода в Лондоне - {w.status}')
     print("Обновление просят... Я ответил что уже скоро...")
 
 @bot.command()
 async def whenupdate(ctx):
+    owm = pyowm.OWM('095cf29b891a2f66e2989b3b8f162ac8')
+    mgr = owm.weather_manager()
+    observation = mgr.weather_at_place(London)
+    w = observation.weather
     await ctx.send(f'Wheather in London {w.status}')
 
 #Команда Погода
