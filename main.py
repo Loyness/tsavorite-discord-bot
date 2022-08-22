@@ -337,7 +337,7 @@ async def error(ctx, error):
         colour = discord.Colour.from_rgb(0, 250, 154)
             ))
 
-@бан.error
+@ban.error
 async def error(ctx, error):
     if isinstance(error, commands.MissingRequiredArgument):
         await ctx.send(embed=discord.Embed(
