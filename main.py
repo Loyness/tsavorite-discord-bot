@@ -100,20 +100,11 @@ async def чтотыумеешь(ctx):
 #Команда Когда обновление
 @bot.command()
 async def когдаобновление(ctx):
-    owm = pyowm.OWM('095cf29b891a2f66e2989b3b8f162ac8')
-    mgr = owm.weather_manager()
-    observation = mgr.weather_at_place("Лондон")
-    w = observation.weather
-    await ctx.send(f'Погода в Лондоне - {w.status}')
-    print("Обновление просят... Я ответил что уже скоро...")
-
-@bot.command()
-async def whenupdate(ctx):
-    owm = pyowm.OWM('095cf29b891a2f66e2989b3b8f162ac8')
-    mgr = owm.weather_manager()
-    observation = mgr.weather_at_place("London")
-    w = observation.weather
-    await ctx.send(f'Wheather in London {w.status}')
+    embed = discord.Embed(title="Нарушение❗",
+            description="Вам был выдан варн.. Тип нарушение: Ты слижком милый:3",
+            timestamp="ц.варн (Уже в процессе)",
+            colour = discord.Colour.from_rgb(0, 250, 154))
+    await ctx.reply(embed)
 
 #Команда Погода
 @bot.command()
