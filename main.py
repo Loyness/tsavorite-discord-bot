@@ -77,7 +77,7 @@ async def ping(ctx):
 @bot.command()
 async def чтотыумеешь(ctx):
     embed=discord.Embed(title="Вы использовали команду помощи", description="Тут вы можете ознакомиться о том как пользоваться мной:", color=0x00fa9a)
-    embed.set_author(name="- RagSnow©2022 (Главный создатель бота)", url="https://www.tiktok.com/@arcadeog", icon_url="https://cdn.discordapp.com/attachments/859748196544675840/1009828423469907988/8b5b1287ef994c431dce571397543e9d.png")
+    embed.set_author(name="- Arcadeog (Главный создатель бота)", url="https://www.tiktok.com/@arcadeog", icon_url="https://cdn.discordapp.com/attachments/926046222869991475/1020204989097979944/aa9e0af70b5f13c9104e30d560387903.png")
     embed.add_field(name="ц.повтори", value="Повторю то что мне скажут", inline=False)
     embed.add_field(name="ц.привет", value="Привет.", inline=False)
     embed.add_field(name="ц.какдела", value="(Думаю и так ясно)", inline=False)
