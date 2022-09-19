@@ -18,7 +18,7 @@ from random import *
 
 
 bot = commands.Bot(command_prefix='ц.', intents=discord.Intents.all())
-TOKEN = "ODgyNTI5NTc4NDc0NjkyNjI4.YS8tuA.QOK6wG0elZxfELYgpii4Gj9c7So"
+TOKEN = "ODgyNTI5NTc4NDc0NjkyNjI4.GT0MVZ.FOQtVu1up-gCoZeDWP1EaKxjAT8bOwGQWMfTg4"
 YDL_OPTIONS = {'format': 'worstaudio/best', 'noplaylist': 'False', 'simulate': 'True',
                'preferredquality': '192', 'preferredcodec': 'mp3', 'key': 'FFmpegExtractAudio'}
 FFMPEG_OPTIONS = {'before_options': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5', 'options': '-vn'}
