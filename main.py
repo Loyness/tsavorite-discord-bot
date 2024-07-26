@@ -18,7 +18,7 @@ from random import *
 
 
 bot = commands.Bot(command_prefix='ц.', intents=discord.Intents.all())
-TOKEN = "ODgyNTI5NTc4NDc0NjkyNjI4.GT0MVZ.FOQtVu1up-gCoZeDWP1EaKxjAT8bOwGQWMfTg4"
+TOKEN = "YOUR_TOKEN"
 YDL_OPTIONS = {'format': 'worstaudio/best', 'noplaylist': 'False', 'simulate': 'True',
                'preferredquality': '192', 'preferredcodec': 'mp3', 'key': 'FFmpegExtractAudio'}
 FFMPEG_OPTIONS = {'before_options': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5', 'options': '-vn'}
@@ -111,7 +111,7 @@ async def когдаобновление(ctx):
 async def погода(ctx, city):
     #config_dict = get_default_config()
     #config_dict['language'] = 'ru'
-    #owm = pyowm.OWM('095cf29b891a2f66e2989b3b8f162ac8', config_dict)
+    #owm = pyowm.OWM('OWM_TOKEN', config_dict)
     #mgr = owm.weather_manager()
     #observation = mgr.weather_at_place(city)
     #w = observation.weather
@@ -126,7 +126,7 @@ async def погода(ctx, city):
 
 @bot.command()
 async def weather(ctx, city):
-    #owm = pyowm.OWM('095cf29b891a2f66e2989b3b8f162ac8')
+    #owm = pyowm.OWM('OWM_TOKEN')
     #mgr = owm.weather_manager()
     #observation = mgr.weather_at_place(city)
     #w = observation.weather
